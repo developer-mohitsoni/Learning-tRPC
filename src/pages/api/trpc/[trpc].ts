@@ -10,5 +10,5 @@ export const createContext = (opts: trpcNext.CreateNextContextOptions) => {
 
 export default trpcNext.createNextApiHandler({
   router: appRouter,
-  createContext: () => ({}),
+  createContext,
 });
