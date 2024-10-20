@@ -1,14 +1,8 @@
-import { z } from "zod";
-import { procedure, router } from "../trpc";
+import { router } from "../trpc";
+import { exampleRouter } from "./example";
 
 export const appRouter = router({
-  // getName: procedure
-  //   .input(z.object({ firstName: z.string(), lastName: z.string() }))
-  //   .query((opts) => {
-  //     return {
-  //       fullName: `${opts.input.firstName} ${opts.input.lastName}`,
-  //     };
-  //   }),
+  example: exampleRouter,
 });
 
 export type AppRouter = typeof appRouter;
