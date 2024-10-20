@@ -6,9 +6,9 @@ import { trpc } from "../../utils/trpc";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const { data } = trpc.getName.useQuery({
-    firstName: "Mohit",
-    lastName: "Soni",
+  const { data } = trpc.example.getName.useQuery({
+    firstName: "John",
+    lastName: "Wick",
   });
 
   return (
